@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Как ужиться с лысым котом?</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#8B5CF6',
+                        secondary: '#EC4899'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-pink-50 to-purple-50 text-gray-800">
+    <!-- Header -->
+    <header id="header" class="bg-white shadow-lg sticky top-0 z-50 header-visible">
+        <div class="container mx-auto px-6 py-2">
+            <h1 class="text-2xl font-bold text-center text-purple-700 mb-1">Как ужиться с лысым котом?</h1>
+            <p class="text-xs text-center text-gray-600 hidden md:block">Руководство для тех, кто решил завести сфинкса — самого необычного кота на планете</p>
+            
+            <!-- Navigation -->
+            <nav class="hidden md:flex justify-center mt-2 space-x-2 overflow-x-auto pb-1">
+                <button onclick="scrollToSection(0)" class="nav-btn bg-purple-600 text-white px-3 py-1 text-sm">Введение</button>
+                <button onclick="scrollToSection(1)" class="nav-btn bg-gray-200 text-gray-700 px-3 py-1 text-sm">Почему он лысый?</button>
+                <button onclick="scrollToSection(2)" class="nav-btn bg-gray-200 text-gray-700 px-3 py-1 text-sm">Уход</button>
+                <button onclick="scrollToSection(3)" class="nav-btn bg-gray-200 text-gray-700 px-3 py-1 text-sm">Питание</button>
+                <button onclick="scrollToSection(4)" class="nav-btn bg-gray-200 text-gray-700 px-3 py-1 text-sm">Игры</button>
+                <button onclick="scrollToSection(5)" class="nav-btn bg-gray-200 text-gray-700 px-3 py-1 text-sm">Заключение</button>
+            </nav>
+            <div class="header-footer"></div> <!-- Голубая полоска -->
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-8">
+        <!-- Hero Section -->
+        <section class="mb-12 text-center fade-in" id="hero">
+            <div class="relative">
+                <div class="image-container w-full rounded-xl overflow-hidden shadow-lg mb-6 mx-auto" style="height: 60vh; max-height: 5000px;">
+                    <img src="media/1.jpg" alt="Герой нашего лонгрида" class="w-full h-full object-cover">
+                </div>
+                <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-xl"></div>
+                <div class="absolute bottom-6 left-6 right-6 text-white">
+                    <h2 class="text-3xl font-bold mb-2">Добро пожаловать в мир сфинксов!</h2>
+                    <p class="text-lg">Они лысые, они странные, они невероятно милые. И они станут вашими лучшими друзьями.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sections -->
+        <!-- Section 1: Введение -->
+        <section class="mb-16 fade-in" id="section-0">
+            <h2 class="text-3xl font-bold text-purple-700 mb-4 border-b-2 border-purple-300 pb-2">Введение</h2>
+            <p class="text-lg leading-relaxed mb-6">Добро пожаловать в мир сфинксов — самых необычных, самых обаятельных и самых... лысых кошек на планете! Если вы думаете, что завести сфинкса — это как завести кота, то вы глубоко заблуждаетесь. Это как завести маленького инопланетянина, который прилетел на Землю, чтобы учить вас любить без условий и терпеть его странности.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8 section-content">
+                <div class="rounded-xl overflow-hidden shadow-lg mx-auto" style="max-width: 600px;">
+                    <div class="image-container" style="height: 256px;">
+                        <img src="media/2.jpg" alt="Сфинкс спит" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-4 bg-white">
+                        <p class="text-sm text-gray-600 text-center">Наш герой в моменте полного расслабления. Да, он действительно спит в такой позе!</p>
+                    </div>
+                </div>
+                <div class="rounded-xl overflow-hidden shadow-lg mx-auto" style="max-width: 600px;">
+                    <div class="image-container" style="height: 256px;">
+                        <img src="media/3.jpg" alt="Сфинкс на тумбочке" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-4 bg-white">
+                        <p class="text-sm text-gray-600 text-center">Тут он занимает свое любимое место — на тумбочке. Потому что высокие места — это его территория.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Почему он лысый? -->
+        <section class="mb-16 fade-in" id="section-1">
+            <h2 class="text-3xl font-bold text-purple-700 mb-4 border-b-2 border-purple-300 pb-2">Почему он лысый?</h2>
+            <p class="text-lg leading-relaxed mb-6">Сфинкс — это не просто кот без шерсти, это настоящий ходячий музей генетики. Его кожа — это как холст для искусства, где каждая складка и пятнышко имеет свою историю. Он не лысый по выбору — он лысый по природе, и это делает его уникальным. Некоторые говорят, что он похож на старика-философа, другие — на маленького дракона. Но все согласны: он невероятно милый.</p>
+            
+            <div class="rounded-xl overflow-hidden shadow-lg mb-8 section-content mx-auto" style="max-width: 1200px;">
+                <div class="image-container" style="height: 320px;">
+                    <img src="media/4.jpg" alt="Сфинкс в одеяле" class="w-full h-full object-cover">
+                </div>
+                <div class="p-4 bg-white">
+                    <p class="text-sm text-gray-600 text-center">Он любит тепло, поэтому часто укрывается в одеялах. И да, он выглядит как маленький фараон, который только что проснулся.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Уход -->
+        <section class="mb-16 fade-in" id="section-2">
+            <h2 class="text-3xl font-bold text-purple-700 mb-4 border-b-2 border-purple-300 pb-2">Как ухаживать за лысым чудом?</h2>
+            <p class="text-lg leading-relaxed mb-6">Уход за сфинксом — это целое искусство. Ему нужна регулярная ванна, потому что его кожа выделяет больше масла, чем ваша кожа после жирной пиццы. Он любит теплые места, так что будьте готовы делиться с ним одеялами, подушками и даже вашим местом на диване. И да, он будет спать в самых неожиданных местах — на тумбочке, в коробке, на вашем ноутбуке. Потому что он — сфинкс, и ему все равно, где спать, главное — быть рядом с вами.</p>
+            
+            <div class="rounded-xl overflow-hidden shadow-lg mb-8 section-content mx-auto" style="max-width: 1200px;">
+                <div class="video-container">
+                    <video controls>
+                        <source src="media/IMG_9005.MOV" type="video/mp4">
+                        Ваш браузер не поддерживает видео.
+                    </video>
+                </div>
+                <div class="p-4 bg-white">
+                    <p class="text-sm text-gray-600 text-center">Да, он действительно любит воду! В отличие от других котов, сфинкс не боится ванны. Наоборот — он считает их спа-процедурами.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Питание -->
+        <section class="mb-16 fade-in" id="section-3">
+            <h2 class="text-3xl font-bold text-purple-700 mb-4 border-b-2 border-purple-300 pb-2">Что он ест?</h2>
+            <p class="text-lg leading-relaxed mb-6">Сфинкс — это не просто кот, это маленький гурман. Он может есть почти все, что вы ему предложите, но предпочитает качественную еду. Не удивляйтесь, если он начнет просить у вас кусочек мяса или рыбы — он знает, что это вкусно. И да, он будет смотреть на вас так, будто вы его личный повар, и ожидать, что вы накормите его именно так, как он хочет.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8 section-content">
+                <div class="rounded-xl overflow-hidden shadow-lg mx-auto" style="max-width: 600px;">
+                    <div class="image-container" style="height: 256px;">
+                        <img src="media/6.jpg" alt="Сфинкс с игрушкой" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-4 bg-white">
+                        <p class="text-sm text-gray-600 text-center">Его любимая игрушка — это не просто игрушка, это его друг. Он может играть с ней часами.</p>
+                    </div>
+                </div>
+                <div class="rounded-xl overflow-hidden shadow-lg mx-auto" style="max-width: 600px;">
+                    <div class="image-container" style="height: 256px;">
+                        <img src="media/7.jpg" alt="Сфинкс на кухне" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-4 bg-white">
+                        <p class="text-sm text-gray-600 text-center">На кухне он чувствует себя как дома. Особенно когда там есть еда. Он будет смотреть на вас так, будто вы должны накормить его прямо сейчас.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Игры -->
+        <section class="mb-16 fade-in" id="section-4">
+            <h2 class="text-3xl font-bold text-purple-700 mb-4 border-b-2 border-purple-300 pb-2">Как он играет?</h2>
+            <p class="text-lg leading-relaxed mb-6">Игры с сфинксом — это отдельное приключение. Он может играть с любым предметом — от игрушки до вашего носка. Он любит прыгать, бегать и ловить пылинки в воздухе. Иногда он будет смотреть на вас так, будто вы его личный тренер, и ожидать, что вы будете играть с ним каждый день. Потому что он — сфинкс, и ему нужно двигаться!</p>
+            
+            <div class="rounded-xl overflow-hidden shadow-lg mb-8 section-content mx-auto" style="max-width: 1200px;">
+                <div class="image-container" style="height: 320px;">
+                    <img src="media/8.jpg" alt="Сфинкс играет" class="w-full h-full object-cover">
+                </div>
+                <div class="p-4 bg-white">
+                    <p class="text-sm text-gray-600 text-center">Игры с сфинксом — это настоящее приключение. Он может играть с любым предметом — от игрушки до вашего носка.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: Заключение -->
+        <section class="mb-16 fade-in" id="section-5">
+            <h2 class="text-3xl font-bold text-purple-700 mb-4 border-b-2 border-purple-300 pb-2">Заключение</h2>
+            <p class="text-lg leading-relaxed mb-6">Жизнь со сфинксом — это постоянное приключение. Он будет удивлять вас, смешить вас и иногда раздражать вас. Но вы будете любить его за это. Потому что он — ваш лысый чудик, ваш маленький инопланетянин, ваш лучший друг. И помните: если вы завели сфинкса, вы уже не просто человек — вы герой, который выбрал необычную, но невероятно прекрасную жизнь.</p>
+            
+            <div class="rounded-xl overflow-hidden shadow-lg mb-8 section-content mx-auto" style="max-width: 1200px;">
+                <div class="image-container" style="height: 320px;">
+                    <img src="media/9.jpg" alt="Сфинкс с хозяином" class="w-full h-full object-cover">
+                </div>
+                <div class="p-4 bg-white">
+                    <p class="text-sm text-gray-600 text-center">Жизнь со сфинксом — это постоянное приключение. Он будет удивлять вас, смешить вас и иногда раздражать вас. Но вы будете любить его за это.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="text-center p-8 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-xl shadow-lg fade-in">
+            <h2 class="text-3xl font-bold mb-4">Готовы завести своего сфинкса?</h2>
+            <p class="text-xl mb-6">Это не просто кот — это маленький инопланетянин, который прилетел на Землю, чтобы учить вас любить без условий.</p>
+            <button id="ctaButton" class="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                Узнать больше
+            </button>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 mt-12">
+        <div class="container mx-auto px-6 text-center">
+            <p>© 2025 Как ужиться с лысым котом? Все права защищены.</p>
+            <p class="mt-2 text-sm">Этот лонгрид создан специально для любителей сфинксов и всех, кто хочет узнать больше о этих удивительных созданиях.</p>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-text">Поставьте зачет</div>
+            <button class="modal-close">Закрыть</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
